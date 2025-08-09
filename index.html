@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujan Singh - AI & Data Science Portfolio</title>
+    <meta name="description" content="Sujan Singh - AI & Data Science Student at Government Engineering College, Bharatpur. Showcasing projects, certifications, and skills in machine learning, data analysis, and artificial intelligence.">
+    <meta name="keywords" content="Sujan Singh, AI, Data Science, Machine Learning, Portfolio, Python, Data Analysis, Artificial Intelligence, Student, Bharatpur">
+    <meta name="author" content="Sujan Singh">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <a href="#home" class="skip-link">Skip to main content</a>
+    <!-- Global Particle Background -->
+    <canvas id="particles-canvas" class="particles-fixed" data-layer="particles"></canvas>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Sujan Singh</a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="certifications.html" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"><!-- particles now global --></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="typing-text">Hi, I'm Sujan Singh</span>
+                </h1>
+                <h2 class="hero-subtitle">AI & Data Science Student</h2>
+                <p class="hero-description">
+                    Passionate about transforming data into insights and building intelligent systems. 
+                    Currently pursuing Artificial Intelligence & Data Science at Government Engineering College, Bharatpur.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links" id="social-links"></div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="images/profile-photo.jpg" alt="Sujan Singh" class="profile-photo" onerror="this.src='https://via.placeholder.com/400x400/6366f1/ffffff?text=Add+Profile+Photo'">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about AI, Data Science, and Innovation</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a dedicated student pursuing a degree in <strong>Artificial Intelligence & Data Science</strong> 
+                        at Government Engineering College, Bharatpur. My journey in technology is driven by a passion 
+                        for uncovering insights from data and building intelligent systems that can make a real difference.
+                    </p>
+                    <p class="about-description">
+                        With expertise in machine learning, data analysis, and programming, I'm constantly exploring 
+                        new technologies and methodologies. I believe in the power of AI to transform industries and 
+                        solve complex problems, and I'm excited to be part of this revolutionary field.
+                    </p>
+                    <div class="education-info">
+                        <h3>Education</h3>
+                        <div class="education-item">
+                            <h4>B.Tech in Artificial Intelligence & Data Science</h4>
+                            <p>Government Engineering College, Bharatpur</p>
+                            <span class="year">2022 - 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="1">0</div>
+                        <div class="stat-label">Internship</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Expertise across multiple domains</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">R</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Data Science & AI</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Machine Learning</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Analysis</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Visualization</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Statistics</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Git/GitHub</span>
+                        <span class="skill-badge">Azure Cloud</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Jupyter</span>
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">Pandas</span>
+                        <span class="skill-badge">NumPy</span>
+                        <span class="skill-badge">Matplotlib</span>
+                        <span class="skill-badge">Seaborn</span>
+                        <span class="skill-badge">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing my latest work in AI and Data Science</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="Machine Learning Project" onerror="this.src='https://via.placeholder.com/600x400/6366f1/ffffff?text=ML+Project'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/sujansingh/ml-project" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Machine Learning Project</h3>
+                        <p class="project-description">
+                            A comprehensive machine learning project implementing various algorithms for predictive analysis. 
+                            Features data preprocessing, model selection, and performance evaluation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                        </div>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image contain">
+                        <img src="images/project2.jpg" alt="Data Analysis Project" onerror="this.src='https://via.placeholder.com/600x400/06b6d4/ffffff?text=Data+Analysis'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/sujansingh/data-analysis" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Analysis Dashboard</h3>
+                        <p class="project-description">
+                            An interactive dashboard for analyzing complex datasets with real-time visualizations. 
+                            Includes statistical analysis and trend prediction capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">Shiny</span>
+                            <span class="tech-tag">ggplot2</span>
+                            <span class="tech-tag">dplyr</span>
+                        </div>
+                        <div class="project-status in-progress">In Progress</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/f59e0b/ffffff?text=AI+Model" alt="AI Model Development" onerror="this.src='https://via.placeholder.com/600x400/f59e0b/ffffff?text=AI+Model'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/sujansingh/ai-model" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Model Development</h3>
+                        <p class="project-description">
+                            Development of intelligent models for pattern recognition and classification tasks. 
+                            Utilizing deep learning techniques for improved accuracy and performance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Keras</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Professional journey and achievements</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h3 class="timeline-title">Azure AI Intern</h3>
+                        <h4 class="timeline-company">Microsoft Azure</h4>
+                        <p class="timeline-description">
+                            Gained hands-on experience in machine learning model building, data preprocessing, 
+                            and model deployment on Azure cloud platform. Worked with Azure Machine Learning 
+                            Studio and contributed to various AI projects.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Azure ML</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Model Deployment</span>
+                            <span class="skill-tag">Data Processing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - Present</div>
+                        <h3 class="timeline-title">AI & Data Science Student</h3>
+                        <h4 class="timeline-company">Government Engineering College, Bharatpur</h4>
+                        <p class="timeline-description">
+                            Pursuing Bachelor's degree in Artificial Intelligence and Data Science. 
+                            Actively engaged in research projects, hackathons, and technical competitions. 
+                            Maintaining excellent academic performance while building practical skills.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Science</span>
+                            <span class="skill-tag">Research</span>
+                            <span class="skill-tag">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's collaborate on exciting projects</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm always open to discussing new opportunities, collaborations, 
+                        or just having a conversation about AI and Data Science. Feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>sujanhany12345@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Bharatpur, Rajasthan, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Institution</h4>
+                                <p>Government Engineering College, Bharatpur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links-contact">
+                        <a href="https://github.com/sujansingh" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/sujansingh" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:sujanhany12345@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Enhanced quick contact panel -->
+                <div class="contact-actions glass">
+                    <div class="availability-badge" aria-label="Current availability status">
+                        <span class="pulse-dot"></span>
+                        <span>Open to Opportunities</span>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-action btn-copy-email" data-email="sujanhany12345@gmail.com" aria-label="Copy email address">
+                            <i class="fas fa-copy"></i>
+                            <span>Copy Email</span>
+                        </button>
+                        <a class="quick-action" href="mailto:sujanhany12345@gmail.com" aria-label="Send email directly">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Email Me</span>
+                        </a>
+                        <a class="quick-action" href="resume.pdf" target="_blank" aria-label="Download resume" rel="noopener">
+                            <i class="fas fa-file-download"></i>
+                            <span>Resume</span>
+                        </a>
+                        <a class="quick-action" href="https://www.linkedin.com/in/sujan-singh-096860312/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a class="quick-action" href="https://github.com/Sujanatgit123" target="_blank" rel="noopener" aria-label="GitHub profile">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    <div class="response-note">
+                        <i class="fas fa-clock"></i>
+                        <span>Typical response within 24 hours • Timezone: IST (UTC+5:30)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Sujan Singh. All rights reserved.</p>
+                    <p>Built with passion for AI and Data Science</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="certifications.html">Certifications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/responsive-utils.js"></script>
+    <!-- Optional: Uncomment to test different configurations -->
+    <!-- <script src="js/config-test.js"></script> -->
+    <script src="js/particles-simple.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Backup particle initialization -->
+    <script>
+        // Backup particle system in case the main one fails
+        setTimeout(() => {
+            const canvas = document.getElementById('particles-canvas');
+            if (canvas && !window.particleSystemRunning) {
+                console.log('Starting backup particle system...');
+                
+                const ctx = canvas.getContext('2d');
+                const particles = [];
+                
+                // Simple particle
+                class SimpleParticle {
+                    constructor() {
+                        this.x = Math.random() * canvas.width;
+                        this.y = Math.random() * canvas.height;
+                        this.vx = (Math.random() - 0.5) * 2;
+                        this.vy = (Math.random() - 0.5) * 2;
+                        this.size = Math.random() * 2 + 1;
+                        this.color = ['#6366f1', '#06b6d4', '#f59e0b'][Math.floor(Math.random() * 3)];
+                        this.opacity = Math.random() * 0.5 + 0.3;
+                    }
+                    
+                    update() {
+                        this.x += this.vx;
+                        this.y += this.vy;
+                        if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
+                        if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
+                    }
+                    
+                    draw() {
+                        ctx.save();
+                        ctx.globalAlpha = this.opacity;
+                        ctx.fillStyle = this.color;
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.restore();
+                    }
+                }
+                
+                // Create particles
+                for (let i = 0; i < 30; i++) {
+                    particles.push(new SimpleParticle());
+                }
+                
+                // Animation loop
+                function animate() {
+                    canvas.width = canvas.offsetWidth;
+                    canvas.height = canvas.offsetHeight;
+                    
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    particles.forEach(particle => {
+                        particle.update();
+                        particle.draw();
+                    });
+                    
+                    requestAnimationFrame(animate);
+                }
+                
+                animate();
+                window.particleSystemRunning = true;
+            }
+        }, 1000);
+    </script>
+    <!-- <script src="js/security.js" data-secure></script> -->
+    <script src="js/responsive-utils.js" data-secure></script>
+    <script src="js/config.js" data-secure></script>
+    <script src="js/script.js" data-secure></script>
+    <script src="js/particles.js" data-secure></script>
+</body>
+</html>

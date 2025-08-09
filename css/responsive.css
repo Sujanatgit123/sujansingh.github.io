@@ -1,0 +1,449 @@
+/* Global Responsive Design System */
+/* Mobile-first approach with performance optimizations */
+
+/* -------------------------------------------------- */
+/* Fluid Typography & Spacing System                 */
+/* -------------------------------------------------- */
+:root {
+  /* Fluid typography - scales between mobile and desktop */
+  --fs-xs: clamp(0.75rem, 0.69rem + 0.26vw, 0.875rem);
+  --fs-sm: clamp(0.875rem, 0.78rem + 0.43vw, 1rem);
+  --fs-base: clamp(1rem, 0.87rem + 0.65vw, 1.25rem);
+  --fs-lg: clamp(1.125rem, 0.93rem + 0.98vw, 1.5rem);
+  --fs-xl: clamp(1.25rem, 0.98rem + 1.37vw, 1.875rem);
+  --fs-2xl: clamp(1.5rem, 1.09rem + 2.07vw, 2.5rem);
+  --fs-3xl: clamp(1.875rem, 1.22rem + 3.26vw, 3.5rem);
+  --fs-4xl: clamp(2.25rem, 1.35rem + 4.57vw, 4.5rem);
+  
+  /* Fluid spacing system */
+  --space-xs: clamp(0.25rem, 0.22rem + 0.16vw, 0.5rem);
+  --space-sm: clamp(0.5rem, 0.39rem + 0.54vw, 1rem);
+  --space-md: clamp(1rem, 0.78rem + 1.09vw, 2rem);
+  --space-lg: clamp(1.5rem, 1.17rem + 1.63vw, 3rem);
+  --space-xl: clamp(2rem, 1.35rem + 3.26vw, 5rem);
+  --space-2xl: clamp(3rem, 2.02rem + 4.89vw, 8rem);
+  
+  /* Container widths */
+  --container-xs: 20rem;   /* 320px */
+  --container-sm: 24rem;   /* 384px */
+  --container-md: 28rem;   /* 448px */
+  --container-lg: 32rem;   /* 512px */
+  --container-xl: 36rem;   /* 576px */
+  --container-2xl: 42rem;  /* 672px */
+  --container-3xl: 48rem;  /* 768px */
+  --container-4xl: 56rem;  /* 896px */
+  --container-5xl: 64rem;  /* 1024px */
+  --container-6xl: 72rem;  /* 1152px */
+  --container-7xl: 80rem;  /* 1280px */
+  --container-full: 100%;
+  
+  /* Breakpoint variables for JavaScript */
+  --bp-xs: 320px;
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+}
+
+/* -------------------------------------------------- */
+/* Base Responsive Adjustments                       */
+/* -------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  /* Improve text rendering on mobile */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  /* Optimize scrolling on mobile */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safe-area support for devices with notches (iOS etc.) */
+@supports(padding:max(env(safe-area-inset-left),0px)) {
+  body {
+    padding-left: max(env(safe-area-inset-left), 0px);
+    padding-right: max(env(safe-area-inset-right), 0px);
+  }
+  .navbar {
+    padding-left: calc(var(--space-sm) + max(env(safe-area-inset-left), 0px));
+    padding-right: calc(var(--space-sm) + max(env(safe-area-inset-right), 0px));
+  }
+}
+
+/* -------------------------------------------------- */
+/* Container System                                   */
+/* -------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-7xl);
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+@media (min-width: 480px) {
+  .container { padding: 0 var(--space-md); }
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 var(--space-lg); }
+}
+
+@media (min-width: 1024px) {
+  .container { padding: 0 var(--space-xl); }
+}
+
+/* -------------------------------------------------- */
+/* Typography Responsive System                       */
+/* -------------------------------------------------- */
+h1 { font-size: var(--fs-4xl); line-height: 1.1; }
+h2 { font-size: var(--fs-3xl); line-height: 1.2; }
+h3 { font-size: var(--fs-2xl); line-height: 1.3; }
+h4 { font-size: var(--fs-xl); line-height: 1.4; }
+h5 { font-size: var(--fs-lg); line-height: 1.5; }
+h6 { font-size: var(--fs-base); line-height: 1.6; }
+
+p { font-size: var(--fs-base); }
+small { font-size: var(--fs-sm); }
+
+/* -------------------------------------------------- */
+/* Grid System                                        */
+/* -------------------------------------------------- */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid-cols-1 { grid-template-columns: 1fr; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Responsive grid breakpoints */
+@media (max-width: 767px) {
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Auto-fit grids for dynamic content */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* -------------------------------------------------- */
+/* Flexbox Utilities                                  */
+/* -------------------------------------------------- */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+
+/* -------------------------------------------------- */
+/* Spacing Utilities                                  */
+/* -------------------------------------------------- */
+.p-xs { padding: var(--space-xs); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); }
+
+.m-xs { margin: var(--space-xs); }
+.m-sm { margin: var(--space-sm); }
+.m-md { margin: var(--space-md); }
+.m-lg { margin: var(--space-lg); }
+.m-xl { margin: var(--space-xl); }
+
+.mt-auto { margin-top: auto; }
+.mb-auto { margin-bottom: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* -------------------------------------------------- */
+/* Mobile-Specific Optimizations                     */
+/* -------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Larger touch targets for mobile */
+  .btn,
+  .nav-link,
+  .social-links a,
+  .project-link {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better mobile spacing */
+  .section {
+    padding: var(--space-xl) 0;
+  }
+  
+  /* Mobile typography adjustments */
+  .hero-title {
+    font-size: var(--fs-3xl);
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    font-size: var(--fs-xl);
+    text-align: center;
+  }
+  
+  /* Mobile-specific layouts */
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-lg);
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  /* Mobile navigation improvements */
+  .nav-menu {
+    padding: var(--space-lg) 0;
+    gap: var(--space-sm);
+  }
+  
+  .nav-link {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--fs-lg);
+  }
+}
+
+/* -------------------------------------------------- */
+/* Tablet-Specific Optimizations                     */
+/* -------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+  
+  /* Tablet-optimized project grid */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* -------------------------------------------------- */
+/* Performance Optimizations                         */
+/* -------------------------------------------------- */
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #ffffff;
+    --text-secondary: #ffffff;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+/* -------------------------------------------------- */
+/* Touch and Hover States                            */
+/* -------------------------------------------------- */
+/* Only show hover effects on devices that support hover */
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift:hover {
+    transform: translateY(-6px);
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Touch-specific interactions */
+@media (hover: none) and (pointer: coarse) {
+  .hover-lift {
+    transition: transform 0.2s ease;
+  }
+  
+  .hover-lift:active {
+    transform: translateY(-3px);
+  }
+}
+
+/* -------------------------------------------------- */
+/* Print Styles                                       */
+/* -------------------------------------------------- */
+@media print {
+  .navbar,
+  .scroll-to-top,
+  .social-links,
+  .hero-buttons,
+  .contact-form-container {
+    display: none !important;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+}
+
+/* -------------------------------------------------- */
+/* Accessibility Improvements                        */
+/* -------------------------------------------------- */
+/* Focus indicators */
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* -------------------------------------------------- */
+/* Ultra-wide & Orientation Edge Cases               */
+/* -------------------------------------------------- */
+/* Constrain readability on very wide displays */
+@media (min-width: 1600px) {
+  .hero-description,
+  .about-description,
+  .section p {
+    max-width: 70ch;
+  }
+  .hero-content {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+}
+
+/* Extreme ultra-wide gently increases max container to avoid over-stretch */
+@media (min-width: 2000px) {
+  .container { max-width: 1400px; }
+}
+
+/* Landscape small-height devices (e.g., phones rotated) */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero { padding: var(--space-lg) 0 var(--space-md); }
+  .hero-content { gap: var(--space-md); }
+  .section { padding: var(--space-lg) 0; }
+  .nav-menu { max-height: calc(100vh - 60px); overflow-y: auto; }
+}
+
+/* -------------------------------------------------- */
+/* Aspect Ratio & Media Utilities                    */
+/* -------------------------------------------------- */
+.aspect-16-9 { aspect-ratio: 16 / 9; }
+.aspect-4-3 { aspect-ratio: 4 / 3; }
+.aspect-1-1 { aspect-ratio: 1 / 1; }
+.aspect-auto { aspect-ratio: auto; }
+
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
+
+/* Ensure images inside ratio wrappers fill space */
+.aspect-16-9 > img,
+.aspect-4-3 > img,
+.aspect-1-1 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Utility to hide horizontal scrollbars when using overflow-x */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+/* -------------------------------------------------- */
+/* Reduced Motion + Performance synergy tweak         */
+/* -------------------------------------------------- */
+.reduced-animations .animate-in { animation: none !important; opacity: 1 !important; transform: none !important; }

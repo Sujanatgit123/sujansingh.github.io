@@ -1,0 +1,66 @@
+# Robots.txt for Sujan Singh - AI & Data Science Portfolio
+# Website: https://sujansingh.me
+# Last Updated: August 9, 2025
+
+# Allow all bots to access main content
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /certifications.html
+Allow: /images/
+
+# Block access to technical files and directories
+Disallow: /js/
+Disallow: /css/
+Disallow: /.htaccess
+Disallow: /README.md
+Disallow: /SECURITY.md
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: *.log
+Disallow: *.tmp
+
+# Specific bot configurations
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block problematic bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Block AI training bots (optional - remove if you want AI to train on your content)
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Sitemaps
+Sitemap: https://sujansingh.me/sitemap.xml
+
+# Host declaration (helps with canonical URLs)
+Host: sujansingh.me
