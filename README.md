@@ -2,7 +2,6 @@
 
 A modern, responsive portfolio website showcasing expertise in Artificial Intelligence, Data Science, and Machine Learning. Built with pure HTML, CSS, and JavaScript with dynamic configuration system.
 
-![Portfolio Preview](images/profile-photo.png)
 
 ## 🌟 Features
 
